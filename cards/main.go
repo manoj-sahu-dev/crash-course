@@ -46,7 +46,7 @@ func main() {
 			fmt.Println(value, index)
 		})
 	*/
-	cards := []deck{"Ace of Spades", "Ace of Diamonds"}
+	cards := deck{"Ace of Spades", "Ace of Diamonds"}
 	for i, card := range cards {
 		fmt.Println(i, card)
 	}
