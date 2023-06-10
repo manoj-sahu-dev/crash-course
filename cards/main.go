@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+// compile using - go run main.go deck.go
+import (
+	"fmt"
+)
 
 // var deckSize int
 // var some = "once"
@@ -46,10 +49,32 @@ func main() {
 			fmt.Println(value, index)
 		})
 	*/
-	cards := deck{"Ace of Spades", "Ace of Diamonds"}
-	for i, card := range cards {
-		fmt.Println(i, card)
+	// cards := deck{"Ace of Spades", "Ace of Diamonds"}
+	// cards.print()
+	// str := cards.Something()
+	// fmt.Println(str)
+
+	cards := createDeck()
+	cards.print()
+	hand, deal := cards.deal(5)
+	hand.print()
+	deal.print()
+	fmt.Println(deal.toString())
+	deal.save("hello.txt")
+
+	// err := os.Chmod("hello.txt", 0777)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// } else {
+	// 	fmt.Println("all good!")
+	// }
+
+	some, error := createDeckFromFile("hello.txt")
+
+	if error == nil {
+		some.print()
 	}
+
 }
 
 // func newCard() string {
