@@ -1,9 +1,6 @@
 package main
 
 // compile using - go run main.go deck.go
-import (
-	"fmt"
-)
 
 // var deckSize int
 // var some = "once"
@@ -54,13 +51,13 @@ func main() {
 	// str := cards.Something()
 	// fmt.Println(str)
 
-	cards := createDeck()
-	cards.print()
-	hand, deal := cards.deal(5)
-	hand.print()
-	deal.print()
-	fmt.Println(deal.toString())
-	deal.save("hello.txt")
+	// cards := createDeck()
+	// cards.print()
+	// hand, deal := cards.deal(5)
+	// hand.print()
+	// deal.print()
+	// fmt.Println(deal.toString())
+	// deal.save("hello.txt")
 
 	// err := os.Chmod("hello.txt", 0777)
 	// if err != nil {
@@ -69,12 +66,21 @@ func main() {
 	// 	fmt.Println("all good!")
 	// }
 
-	some, error := createDeckFromFile("hello.txt")
+	// some, error := createDeckFromFile("hello.txt")
 
-	if error == nil {
-		some.print()
-	}
+	// if error == nil {
+	// 	some.print()
+	// }
+	// i := 10
+	// j := 20
+	// fmt.Println("before swap: ", i, " : ", j)
 
+	// i, j = j, i
+	// fmt.Println("after swap: ", i, " : ", j)
+	cards := createDeck()
+	cards.print()
+	cards.shuffle()
+	cards.print()
 }
 
 // func newCard() string {
